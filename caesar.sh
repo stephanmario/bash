@@ -11,7 +11,7 @@ then
 
 	elif [ -z $2 ]
 	then
-		echo "Usage: caesar.sh <text>"
+		echo "Usage: caesar.sh -e | -d <plain/cipher Text>"
 
 	else
 		echo "Error: Text must be a valid Alphabetical Char"
@@ -19,7 +19,7 @@ then
 	fi
 elif [ -z "$1" ]
 then
-	echo "usage error"
+	echo "Error. Usage: caesar.sh -e <encryptText> | -d <decryptText> "
 
 elif [ "$1" = "-d" ]
 then
@@ -29,7 +29,7 @@ then
 	
 	elif [ -z $2 ]
 	then
-		echo "Error! Usage: caesar.sh -d | -e <plaintext> | <ciphertext>"
+		echo "Error! Usage: caesar.sh -e <plainText> | -d <ciphertext> "
 	else
 		echo "Error: Cipher text must be a valid A-z char"
 		exit 1
